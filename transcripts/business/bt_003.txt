@@ -1,1 +1,10 @@
-##########
+Sarah (PM): Managers want a dashboard that gives them real-time visibility into support operations.
+James (Client): Specifically, we want to see ticket volume as it changes during the day.
+Sarah (PM): Anything else besides volume?
+James (Client): Yes, response time stats are critical. We need to know how quickly each support agent is responding and resolving issues.
+Sarah (PM): Should that be broken down by agent?
+James (Client): Absolutely. We need it segmented by individual agent and also by ticket tier.
+Sarah (PM): Do they need trend data or just live metrics?
+James (Client): Both would be useful, but live metrics are the priority for now.
+Sarah (PM): Any export requirements?
+James (Client): Ideally yes, but that’s secondary. We mainly need managers to spot bottlenecks fast.
