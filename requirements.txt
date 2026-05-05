@@ -3,3 +3,5 @@ pydantic>=2.0
 typer
 python-dotenv
 tqdm
+faiss-cpu
+numpy
