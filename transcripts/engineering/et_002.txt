@@ -1,1 +1,6 @@
-########
+Dev (Amir): For billing, we’ll integrate Stripe for payment processing. That should cover cards cleanly.
+Dev (Priya): I can set up a cron job that triggers billing every 30 days. That’s the simplest implementation.
+Dev (Amir): We can store invoices in the same database and email them after generation.
+Dev (Priya): I’m not planning a full billing rules engine yet. We can hardcode the current cycle and revisit if the client asks for more complexity.
+Dev (Amir): Failed payments can just surface in the admin dashboard for now.
+Dev (Priya): That should be enough for the first release.
