@@ -1,1 +1,6 @@
-23232424242
+Dev (Amir): To keep things simple, we’re deploying everything to AWS us-east-1.
+Dev (Priya): That gives us one environment to manage and should be enough for the initial load.
+Dev (Amir): We can use the same database for all users and add region support later if needed.
+Dev (Priya): I’m not planning separate storage clusters right now.
+Dev (Amir): We should be okay as long as latency is acceptable from the US.
+Dev (Priya): Yeah, APAC can be a future enhancement once we have traction there.
