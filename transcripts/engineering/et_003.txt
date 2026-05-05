@@ -1,1 +1,7 @@
-@@@@@@@
+Dev (Priya): I’ll add a dashboard that shows the total number of open tickets. That should give managers a quick overview.
+Dev (Amir): We can also show closed tickets by day, which is easy to compute from the database.
+Dev (Priya): I’m not planning to calculate response-time metrics yet. That would require event tracking we don’t currently have.
+Dev (Amir): Agent-level breakdowns can wait until we know what data the client actually wants to act on.
+Dev (Priya): For now, let’s focus on a simple summary view and avoid overbuilding.
+Dev (Amir): Agreed — we can expand it in a later phase if needed.
+
