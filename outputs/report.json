@@ -1,1 +1,11 @@
-#outputs
+[
+  {
+    "gap_id": "GAP-001",
+    "type": "scope_mismatch",
+    "description": "Business requires 24 months history but engineering plans 12 months",
+    "requirement_ref": "REQ-004",
+    "solution_ref": "SOL-003",
+    "suggested_action": "Confirm retention policy",
+    "confidence": 0.92
+  }
+]
