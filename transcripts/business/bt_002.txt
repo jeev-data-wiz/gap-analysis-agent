@@ -1,1 +1,10 @@
-#####
+Sarah (PM): The client wants the portal to support automated invoicing and card payments. They specifically mentioned Stripe.
+James (Client): Right, and billing needs to be flexible because different customers are on different plans.
+Sarah (PM): What kind of flexibility do you need?
+James (Client): Billing cycles must be configurable per client. Some are monthly, some annual, and a few may need custom schedules later.
+Sarah (PM): Do invoices need to be generated automatically?
+James (Client): Yes, every cycle. Also the invoice should be downloadable and sent by email.
+Sarah (PM): Any reconciliation requirements?
+James (Client): We need to be able to match payments against invoices, and failed charges should be visible to support.
+Sarah (PM): Understood. Any special payment methods beyond cards?
+James (Client): Not initially. Cards first, but the design should not make it hard to add others later.
