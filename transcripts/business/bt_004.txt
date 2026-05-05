@@ -1,1 +1,10 @@
-######
+Sarah (PM): The client is expanding globally and needs the platform to support users in the US and APAC.
+James (Client): Yes, and data residency is a real concern. Customer data has to stay in the region where it was collected.
+Sarah (PM): So if a user is in Singapore, their data stays in APAC?
+James (Client): Exactly. We can’t centralize all data in the US.
+Sarah (PM): Are there any latency expectations?
+James (Client): Yes, the experience should still feel fast for users in both regions.
+Sarah (PM): Do we need region-specific access controls or just storage separation?
+James (Client): Storage separation is the main requirement for now, but cross-region access has to be carefully controlled.
+Sarah (PM): Any launch order preference?
+James (Client): US first is fine, but the architecture must not block APAC rollout.
