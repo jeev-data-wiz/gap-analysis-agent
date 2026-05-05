@@ -1,11 +1,94 @@
 [
   {
-    "gap_id": "GAP-001",
-    "type": "scope_mismatch",
-    "description": "Business requires 24 months history but engineering plans 12 months",
-    "requirement_ref": "REQ-004",
-    "solution_ref": "SOL-003",
-    "suggested_action": "Confirm retention policy",
-    "confidence": 0.92
+    "case_id": "CASE-001",
+    "gaps": [
+      {
+        "gap_id": "GAP-001",
+        "type": "scope_mismatch",
+        "requirement_ref": "REQ-004 (24 months, filterable by date and type)",
+        "solution_ref": "SOL-003 (12 months with load-more)",
+        "description": "Business requested at least 24 months of account history with date and type filtering. Engineering planned a 12-month default with load-more, and did not mention filtering.",
+        "suggested_action": "Confirm retention policy and extend the history view to 24 months with date/type filters."
+      },
+      {
+        "gap_id": "GAP-002",
+        "type": "unaddressed",
+        "requirement_ref": "REQ-005 (GDPR compliance)",
+        "solution_ref": "None",
+        "description": "The business explicitly called out GDPR compliance, but no privacy, consent, or EU data handling plan was discussed.",
+        "suggested_action": "Add GDPR requirements to the implementation plan, including data processing, retention, and access controls."
+      },
+      {
+        "gap_id": "GAP-003",
+        "type": "unaddressed",
+        "requirement_ref": "REQ-006 (admin view and user impersonation)",
+        "solution_ref": "None",
+        "description": "Admins need cross-account visibility and user impersonation, but engineering did not discuss either capability.",
+        "suggested_action": "Define admin access flows and impersonation safeguards before implementation."
+      }
+    ]
+  },
+  {
+    "case_id": "CASE-002",
+    "gaps": [
+      {
+        "gap_id": "GAP-004",
+        "type": "scope_mismatch",
+        "requirement_ref": "Configurable billing cycles per client",
+        "solution_ref": "Cron job billing every 30 days",
+        "description": "Business needs monthly, annual, and potentially custom billing schedules, but engineering hardcoded a 30-day cycle.",
+        "suggested_action": "Replace the fixed cron-based cycle with configurable billing rules per client."
+      },
+      {
+        "gap_id": "GAP-005",
+        "type": "unaddressed",
+        "requirement_ref": "Automated invoicing and invoice email delivery",
+        "solution_ref": "Partial",
+        "description": "Engineering mentioned invoice storage and email after generation, but did not define the invoice generation flow or reconciliation behavior.",
+        "suggested_action": "Specify invoice creation, delivery, and payment-to-invoice reconciliation in the billing design."
+      }
+    ]
+  },
+  {
+    "case_id": "CASE-003",
+    "gaps": [
+      {
+        "gap_id": "GAP-006",
+        "type": "scope_mismatch",
+        "requirement_ref": "Real-time response time statistics by agent and ticket tier",
+        "solution_ref": "Open ticket count and closed tickets by day",
+        "description": "The business asked for live response-time metrics broken down by agent and tier, but engineering only planned simple volume summaries.",
+        "suggested_action": "Add event tracking and metric aggregation for agent-level response and resolution times."
+      },
+      {
+        "gap_id": "GAP-007",
+        "type": "unaddressed",
+        "requirement_ref": "Trend data and export capability",
+        "solution_ref": "None",
+        "description": "The business mentioned trend visibility and possible export support, but engineering did not include either.",
+        "suggested_action": "Confirm whether trend charts and data export are required for the first release or deferred."
+      }
+    ]
+  },
+  {
+    "case_id": "CASE-004",
+    "gaps": [
+      {
+        "gap_id": "GAP-008",
+        "type": "unaddressed",
+        "requirement_ref": "APAC data residency",
+        "solution_ref": "AWS us-east-1 single-region deployment",
+        "description": "The business requires region-local data storage, but engineering chose a single US region with shared storage for all users.",
+        "suggested_action": "Design a regional storage strategy that keeps APAC customer data in-region."
+      },
+      {
+        "gap_id": "GAP-009",
+        "type": "scope_mismatch",
+        "requirement_ref": "Fast user experience in US and APAC",
+        "solution_ref": "US-only deployment",
+        "description": "Engineering optimized for US-only infrastructure, which may not satisfy the stated latency expectations for APAC users.",
+        "suggested_action": "Validate latency targets and evaluate multi-region deployment or regional edge handling."
+      }
+    ]
   }
 ]
